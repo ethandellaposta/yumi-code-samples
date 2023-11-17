@@ -1,0 +1,65 @@
+export interface ProductUpdateEvent {
+  id: number;
+  title: string;
+  body_html: string;
+  vendor: string;
+  product_type: string;
+  created_at: Date;
+  handle: string;
+  updated_at: Date;
+  published_at: Date;
+  template_suffix: string;
+  status: string;
+  published_scope: string;
+  tags: string;
+  admin_graphql_api_id: string;
+  variants: Array<{
+    id: number;
+    product_id: number;
+    title: string;
+    price: string;
+    sku: string;
+    position: number;
+    inventory_policy: string;
+    compare_at_price: string;
+    fulfillment_service: string;
+    inventory_management: string;
+    option1: string;
+    option2: string;
+    option3: string;
+    created_at: Date;
+    updated_at: Date;
+    taxable: boolean;
+    barcode: string;
+    grams: number;
+    image_id: string;
+    weight: number;
+    weight_unit: string;
+    inventory_item_id: string;
+    inventory_quantity: number;
+    old_inventory_quantity: number;
+    requires_shipping: boolean;
+    admin_graphql_api_id: string;
+  }>;
+  options: Array<{
+    id: number;
+    product_id: number;
+    name: string;
+    position: number;
+    values: Array<string>
+  }>;
+  images: Array<{
+    id: number;
+    product_id: number;
+    position: number;
+    created_at: Date;
+    updated_at: Date;
+    alt: string;
+    width: number;
+    height: number;
+    src: string;
+    variant_ids: Array<number>;
+    admin_graph_ql_api: string;
+  }>;
+  image: string;
+}
